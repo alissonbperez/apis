@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dependencies type="guid" guid="d76f4ce7-72d3-4bca-a7fd-bddbca7846bc">
+  <Table name="Bairro" />
+  <Table name="Pais" />
+  <Table name="UF" />
+  <Table name="Municipio" />
+  <Table name="Pessoa" />
+  <Table name="PessoaPerfil" />
+  <Table name="PessoaContato" />
+  <Table name="DocumentoFinanceiro" />
+  <Table name="Movimento" />
+  <Table name="PessoaClassificador" />
+</Dependencies>

@@ -1,0 +1,46 @@
+{
+"ObjectType":"ServiceGroup",
+"Name":"CentroArmazenagemAPI",
+"BasePath":"API",
+"Mappings":
+[
+{
+"Verb":"GET",
+"PathRegexp":"centroarmazenagem",
+"Path":"centroarmazenagem",
+"Name":"consultar",
+"Bodystyle":"Wrapped",
+"VariableAlias": [],
+"ServiceMethod":"gxep_consultar",
+"Implementation":"CentroArmazenagemControllerAPI"
+},
+{
+"Verb":"POST",
+"PathRegexp":"centroarmazenagem",
+"Path":"centroarmazenagem",
+"Name":"inserir",
+"Bodystyle":"Wrapped",
+"VariableAlias": [],
+"ServiceMethod":"gxep_inserir",
+"Implementation":"CentroArmazenagemControllerAPI"
+},
+{
+"Verb":"PUT",
+"PathRegexp":"centroarmazenagem/([^/]+)",
+"Path":"centroarmazenagem/{centroarmazenagemid}",
+"Name":"atualizar",
+"Bodystyle":"Wrapped",
+"VariableAlias": [],
+"ServiceMethod":"gxep_atualizar",
+"Implementation":"CentroArmazenagemControllerAPI"
+},
+{
+"Verb":"DELETE",
+"PathRegexp":"centroarmazenagem/([^/]+)",
+"Path":"centroarmazenagem/{centroarmazenagemid}",
+"Name":"excluir",
+"Bodystyle":"Wrapped",
+"VariableAlias": [],
+"ServiceMethod":"gxep_excluir",
+"Implementation":"CentroArmazenagemControllerAPI"
+}]}

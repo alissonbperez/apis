@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dependencies type="guid" guid="011af7b6-2de6-46cc-8b59-eeca6b82b2d7">
+  <Table name="FormaPagamento" />
+  <Table name="Empresa" />
+  <Table name="ContaBancaria" />
+  <Table name="Pessoa" />
+  <Table name="DocumentoFinanceiro" />
+  <Table name="MovimentoFinanceiro" />
+  <Table name="PrazoPagamento" />
+  <Table name="PrazoPagamentoParcela" />
+  <Table name="MovimentoFinanceiroDesdobramento" />
+</Dependencies>

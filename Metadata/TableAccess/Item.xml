@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dependencies type="guid" guid="e12cc1cf-2c1a-4519-b3db-04de7bfec328">
+  <Table name="Item" />
+  <Table name="ItemClassificador" />
+  <Table name="ItemFatorConversao" />
+  <Table name="MovimentoEstoque" />
+  <Table name="ConfiguradorFiscalItem" />
+  <Table name="MovimentoItem" />
+</Dependencies>
