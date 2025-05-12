@@ -1,0 +1,196 @@
+openapi: 3.0.0
+info:
+  title: "CentroArmazenagemAPI"
+  description: "Centro Armazenagem API"
+  version: "20250512125712"
+servers:
+  - url: http://localhost:8082/WMCWMC/API
+paths:
+  /CentroArmazenagem:
+    get:
+      tags:
+        - CentroArmazenagemAPI  
+      operationId: "CentroArmazenagemAPI.Consultar"
+      summary: "Consultar"
+      parameters:
+        - name: "Centroarmazenagemid"
+          in: "query"
+          required: false
+          schema:
+            type: "integer"
+            format: "int64"
+      
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CentroArmazenagemResponse"  
+
+        404:
+          description: "Not found"
+
+
+    post:
+      tags:
+        - CentroArmazenagemAPI  
+      operationId: "CentroArmazenagemAPI.Inserir"
+      summary: "Inserir"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/InserirInput"
+      
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/GeneXus.Common.Messages_Message"  
+
+        404:
+          description: "Not found"
+
+  /CentroArmazenagem/{CentroArmazenagemID}:
+    put:
+      tags:
+        - CentroArmazenagemAPI  
+      operationId: "CentroArmazenagemAPI.Atualizar"
+      summary: "Atualizar"
+      parameters:
+        - name: "CentroArmazenagemID"
+          in: "path"
+          required: true
+          schema:
+            type: "integer"
+            format: "int64"
+
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AtualizarInput"
+      
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/GeneXus.Common.Messages_Message"  
+
+        404:
+          description: "Not found"
+
+
+    delete:
+      tags:
+        - CentroArmazenagemAPI  
+      operationId: "CentroArmazenagemAPI.Excluir"
+      summary: "Excluir"
+      parameters:
+        - name: "CentroArmazenagemID"
+          in: "path"
+          required: true
+          schema:
+            type: "integer"
+            format: "int64"
+      
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/GeneXus.Common.Messages_Message"  
+
+        404:
+          description: "Not found"
+components:
+  schemas:
+    InserirInput:  
+      properties:
+        CentroArmazenagemRequest:
+          description: "Centro Armazenagem Request"
+          $ref: "#/components/schemas/CentroArmazenagemRequest"
+
+    AtualizarInput:  
+      properties:
+        CentroArmazenagemRequest:
+          description: "Centro Armazenagem Request"
+          $ref: "#/components/schemas/CentroArmazenagemRequest"
+
+  
+    CentroArmazenagemResponse:
+      properties:
+        Total:
+          description: "Total"
+          type: "integer"
+          format: "int32"
+        Data:
+          description: "Centro Armazenagem Response Model"
+          type: array
+          items:
+            $ref: "#/components/schemas/CentroArmazenagemResponseModel"
+
+
+
+    CentroArmazenagemRequest:
+      properties:
+        CentroArmazenagemDescricao:
+          description: "Centro Armazenagem"
+          type: "string"
+        CentroArmazenagemSituacao:
+          description: "Situação"
+          type: "integer"
+          format: "int32"
+
+
+
+    GeneXus.Common.Messages_Message:
+      properties:
+        Id:
+          description: "Id"
+          type: "string"
+        Type:
+          description: "Type"
+          type: "integer"
+          format: "int32"
+        Description:
+          description: "Description"
+          type: "string"
+
+
+
+    CentroArmazenagemResponseModel:
+      properties:
+        CentroArmazenagemID:
+          description: "Centro Armazenagem"
+          type: "integer"
+          format: "int64"
+        CentroArmazenagemDescricao:
+          description: "Centro Armazenagem"
+          type: "string"
+        CentroArmazenagemSituacao:
+          description: "Situação"
+          type: "integer"
+          format: "int32"
+        CentroArmazenagemDataCadastro:
+          description: "Data Cadastro"
+          type: "string"
+          format: "date"
+
+
+
+ 
